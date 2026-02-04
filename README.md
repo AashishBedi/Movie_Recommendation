@@ -5,7 +5,8 @@
 
 A live, interactive machine learning application that suggests movies based on content similarity. This project leverages Natural Language Processing (NLP) to analyze movie metadata and provides a seamless user experience through a web-based interface.
 
-**🔗 Live Demo:** [View App](https://movierecommendation-4bn6n5byk3akrxdjtsrssr.streamlit.app/)
+**🔗 Live Demo:**
+https://movierecommendation-4bn6n5byk3akrxdjtsrssr.streamlit.app/
 
 ## 🚀 Overview
 This system identifies the relationship between movies using metadata such as genres, keywords, cast, and crew. By calculating the mathematical "distance" between films, it can suggest titles that are most similar to a user's selection.
