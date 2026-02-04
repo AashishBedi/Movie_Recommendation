@@ -7,8 +7,8 @@ A live, interactive machine learning application that suggests movies based on c
 
 ---
 
-### 🔗 Live Demo
-[Try the Movie Recommendation App](https://movierecommendation-4bn6n5byk3akrxdjtsrssr.streamlit.app)
+### 🔗 Live Demo[Try the Movie Recommendation App by the link given below]
+https://movierecommendation-4bn6n5byk3akrxdjtsrssr.streamlit.app
 
 ---
 
