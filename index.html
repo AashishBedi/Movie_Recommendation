@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashish Bedi - Movie Discovery Project</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --accent: #22d3ee;
+            --bg: #030712;
+            --surface: #111827;
+            --text: #f9fafb;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: #000; color: var(--text); overflow-x: hidden; }
+
+        .slide {
+            width: 1024px;
+            height: 576px;
+            margin: 40px auto;
+            background: linear-gradient(145deg, var(--bg), #1e1b4b);
+            border: 1px solid #1f2937;
+            padding: 40px 60px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 { 
+            font-size: 3.5rem; 
+            font-weight: 700; 
+            line-height: 1.1; 
+            margin-bottom: 1rem; 
+            background: linear-gradient(to right, var(--accent), var(--secondary)); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        h2 { font-size: 1.8rem; color: var(--accent); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        h2::before { content: ''; width: 25px; height: 4px; background: var(--primary); display: inline-block; border-radius: 2px; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { background: var(--surface); padding: 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+
+        .highlight { color: var(--accent); font-weight: 600; }
+        .flow-container { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; }
+        .flow-step { background: var(--primary); padding: 10px; border-radius: 8px; text-align: center; font-size: 0.8rem; width: 18%; }
+        
+        ul { list-style: none; margin-top: 10px; }
+        li { margin-bottom: 8px; padding-left: 20px; position: relative; font-size: 0.9rem; }
+        li::before { content: '◈'; position: absolute; left: 0; color: var(--secondary); }
+        
+        .footer { position: absolute; bottom: 20px; right: 60px; font-size: 0.8rem; opacity: 0.5; }
+    </style>
+</head>
+<body>
+
+    <section class="slide" style="justify-content: center;">
+        <h1>How Do Computers <br>Suggest Movies?</h1>
+        <p style="font-size: 1.3rem; font-weight: 300; letter-spacing: 2px;">An Intuitive Look into the Movie Recommender</p>
+        <p style="margin-top: 40px; color: var(--accent);">By Aashish Bedi</p>
+    </section>
+
+    <section class="slide">
+        <h2>The "Librarian" Problem</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>The Overload</h3>
+                <p>Imagine a library with 5,000 books but no labels. You want a book "like Inception," but the librarian doesn't speak your language.</p>
+            </div>
+            <div class="card">
+                <h3>The Solution</h3>
+                <p>This project creates a <span class="highlight">Movie Translator</span>. It converts descriptions, actors, and directors into a mathematical language the computer understands perfectly.</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="slide">
+        <h2>The Kitchen: Jupyter Notebook</h2>
+        <p>Before a chef serves a meal, they experiment in the kitchen. Jupyter is our "Kitchen."</p>
+        <ul>
+            <li><strong>Mixing Ingredients:</strong> We combined the plot description, genres, and cast names.</li>
+            <li><strong>Taste Testing:</strong> We checked if the data was messy (missing values) and cleaned it.</li>
+            <li><strong>The Result:</strong> A perfect "Recipe" for what makes a movie unique.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Teaching the Computer "Grammar"</h2>
+        <p>Computers are literal. To them, "Dance," "Dancing," and "Dancer" are three totally different things.</p>
+        <div class="card" style="margin-top: 20px;">
+            <h3>Porter Stemming (Simplification)</h3>
+            <p>We use a tool called a <span class="highlight">Stemmer</span> to chop off the endings of words. Now, the computer knows that all those words are just about "Danc."</p>
+        </div>
+        
+    </section>
+
+    <section class="slide">
+        <h2>Turning Movies into a Map</h2>
+        <p>How does the computer "see" similarity? It places movies on a giant 5,000-dimensional map.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Bag of Words</h3>
+                <p>We count the 5,000 most popular words. Every movie gets a "GPS Coordinate" based on these counts.</p>
+            </div>
+            <div class="card">
+                <h3>Distance = Similarity</h3>
+                <p>If two movies have nearly the same coordinates, they are "neighbors" on the map. These are your recommendations!</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="slide">
+        <h2>Saving the Work: What is "Pickle"?</h2>
+        <p>Calculating the map for 5,000 movies takes time and power. We don't want to do it every time a user clicks a button.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>The "Freeze-Dry" Effect</h3>
+                <p><span class="highlight">Pickle</span> allows us to "freeze" our calculated map into a small file (<code>.pkl</code>).</p>
+            </div>
+            <div class="card">
+                <h3>Instant Access</h3>
+                <p>When the website starts, it just "thaws" the Pickle file. It’s like taking a pre-made meal out of the fridge instead of cooking from scratch.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>The Messenger: FastAPI</h2>
+        <p>The math lives in the basement (Server). The user is in the dining room (Website). How do they talk?</p>
+        <div class="card" style="margin-top: 20px; border-left: 5px solid var(--secondary);">
+            <p><strong>FastAPI</strong> is like a world-class waiter. You tell the waiter: <i>"I want a movie like Batman."</i> The waiter runs to the basement, asks the math engine, and brings the answer back to you in milliseconds.</p>
+        </div>
+        
+    </section>
+
+    <section class="slide">
+        <h2>The Interface: Streamlit</h2>
+        <p>This is the actual "App" the user touches. We made it visual and easy to use.</p>
+        <ul>
+            <li><strong>Dropdown Menu:</strong> No typing required—just pick a movie.</li>
+            <li><strong>Visual Posters:</strong> Using an API to fetch real posters from the internet so you don't just see a list of boring names.</li>
+            <li><strong>Fast Results:</strong> Powered by the "Pickled" math we did earlier.</li>
+        </ul>
+        
+    </section>
+
+    <section class="slide">
+        <h2>The Big Picture (Control Flow)</h2>
+        <div class="flow-container">
+            <div class="flow-step">1. Build the Map (Notebook)</div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-step">2. Freeze the Map (Pickle)</div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-step">3. Serve the Map (FastAPI)</div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-step">4. Show the Map (Streamlit)</div>
+        </div>
+        <div class="card" style="margin-top: 50px;">
+            <p>This "Pipeline" ensures that even though the math is complex, the user experience is as simple as <strong>Click and Discover.</strong></p>
+        </div>
+    </section>
+    
+<section class="slide" style="justify-content: center; align-items: center; text-align: center;">
+    <h1>Questions?</h1>
+    <div style="margin-top: 40px; opacity: 0.6;">
+        <a href="https://github.com/AashishBedi/Movie_Recommendation" style="color: rgb(255, 6, 213); text-decoration: none; font-weight: 600;"> Click here to see the project </a>
+        <p>University: Lovely Professional University</p>
+    </div>
+</section>
+
+</body>
+</html>
