@@ -54,11 +54,4 @@ streamlit run app.py
 ## 🤝 Contact
 
 Developed by **Aashish Bedi** *Computer Science & Engineering Student*
-
-```
-
-### Pro-Tips for your Placement Portfolio:
-* **GitHub Repository Description:** On your GitHub page, make sure to paste the live link in the **"About"** section (click the gear icon ⚙️) so recruiters see the demo immediately without even opening the README.
-* **Performance:** I noticed your app loads very quickly. You can mention in an interview that you used `pickle` to store the similarity matrix, which avoids re-calculating scores every time a user visits the site.
-
-```
+https://www.linkedin.com/in/aashishbedi/
