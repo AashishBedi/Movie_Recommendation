@@ -12,6 +12,8 @@ https://movierecommendation-4bn6n5byk3akrxdjtsrssr.streamlit.app
 
 ---
 
+### 🔗 Click on the below link to understand control flow
+https://AashishBedi.github.io/Movie_Recommendation/
 
 ## 🚀 Overview
 This system identifies the relationship between movies using metadata such as genres, keywords, cast, and crew. By calculating the mathematical "distance" between films, it can suggest titles that are most similar to a user's selection.
