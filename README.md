@@ -20,9 +20,9 @@ This system identifies the relationship between movies using metadata such as ge
 
 ## 🛠️ Tech Stack
 - **Frontend & Deployment:** Streamlit, Streamlit Cloud
-- **Machine Learning:** Scikit-learn (CountVectorizer, Cosine Similarity)
+- **Machine Learning:** Scikit-learn (CountVectorizer, Tf-Idf, Cosine Similarity)
 - **Data Manipulation:** Pandas, NumPy, Python
-- **Natural Language Processing:** NLTK (Stemming)
+- **Natural Language Processing:** NLTK (Lemmatization)
 - **External API:** The Movie Database (TMDB) for real-time poster fetching
 
 ## 📂 Key Files
