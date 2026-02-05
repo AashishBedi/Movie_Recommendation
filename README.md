@@ -32,7 +32,7 @@ This system identifies the relationship between movies using metadata such as ge
 - `movie_dict.pkl`: Processed movie data used for the search and selection interface.
 
 ## ⚙️ How It Works
-1.  **Vectorization:** Movie tags are converted into a 5,000-dimensional vector space using `Bag of Words`.
+1.  **Vectorization:** Movie tags are converted into a 5,000-dimensional vector space using `Tf-Idf`.
 2.  **Similarity Analysis:** The app utilizes **Cosine Similarity** instead of Euclidean distance to measure the angle between movie vectors, ensuring accuracy regardless of tag length.
 3.  **Real-time Fetching:** When a recommendation is generated, the app calls the TMDB API to retrieve high-resolution posters for a more visual user experience.
 
